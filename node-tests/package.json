@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha **/*.test.js",
-    "test-watch": "nodemon -exec \"npm test\""
+    "test-watch": "nodemon --exec \"npm test\""
   },
   "author": "Anthony Synenko",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.16.3"
+  },
   "devDependencies": {
     "expect": "^1.20.2",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "rewire": "^4.0.1",
+    "supertest": "^3.1.0"
   }
 }
