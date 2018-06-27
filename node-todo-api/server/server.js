@@ -17,8 +17,17 @@ app.post('/todos', (req, res) => {
   todo.save().then(doc => {
     res.send(doc);
   }, ({ message }) => {
-    res.status(400).send(message)
+    res.status(400).send(message);
   })
+});
+
+app.get('/todos', (req, res) => {
+  Todo.find()
+    .then(todos => {
+      res.send({ todos })
+    }, ({ message }) => {
+      res.status(400).send(message);
+    })
 });
 
 app.listen(3000, () => {
