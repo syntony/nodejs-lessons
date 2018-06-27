@@ -13,7 +13,7 @@ const Todo = mongoose.model('Todos', {
   },
   completedAt: {
     type: Number,
-    default: Math.floor(Date.now() / 1000)
+    default: null
   }
 });
 
